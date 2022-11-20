@@ -1,0 +1,63 @@
+import classes.*;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String args[]) {
+		int a = 10;
+		String str = "Форма";
+		Equipment equ1 = new Equipment();
+		Equipment equ2 = new Equipment(a);
+		Equipment equ3 = new Equipment(str, a);
+		equ1.input();
+		System.out.println("\n" + "equ1:");
+		equ1.output();
+		System.out.println("\n" + "equ2:");
+		equ2.output();
+		System.out.println("\n" + "equ3:");
+		equ3.output();
+		str = "Дубинка";
+		Weapon wp1 = new Weapon();
+		Weapon wp2 = new Weapon(a);
+		Weapon wp3 = new Weapon(str, a);
+		wp1.input();
+		System.out.println("\n" + "wp1:");
+		wp1.output();
+		System.out.println("\n" + "wp2:");
+		wp2.output();
+		System.out.println("\n" + "wp3:");
+		wp3.output();
+		str = "Седан";
+		Transport tr1 = new Transport();
+		Transport tr2 = new Transport(a);
+		Transport tr3 = new Transport(str, a);
+		tr1.input();
+		System.out.println("\n" + "tr1:");
+		tr1.output();
+		System.out.println("\n" + "tr2:");
+		tr2.output();
+		System.out.println("\n" + "tr3:");
+		tr3.output();
+		str = "Охранник";
+		Jobtitle jt1 = new Jobtitle();
+		Jobtitle jt2 = new Jobtitle(a);
+		Jobtitle jt3 = new Jobtitle(str, a);
+		jt1.input();
+		System.out.println("\n" + "jt1:");
+		jt1.output();
+		System.out.println("\n" + "jt2:");
+		jt2.output();
+		System.out.println("\n" + "jt3:");
+		jt3.output();
+		Employee emp1 = new Employee();
+		Employee emp2 = new Employee(10);
+		Employee emp3 = new Employee(11, equ1, tr1, jt1, wp1);
+		emp1.input();
+		System.out.println("\n" + "emp1:");
+		emp1.output();
+		System.out.println("\n" + "emp2:");
+		emp2.output();
+		System.out.println("\n" + "emp3:");
+		emp3.output();
+        System.out.println("Затраты на emp1" + emp1.empcost());
+	}
+}
